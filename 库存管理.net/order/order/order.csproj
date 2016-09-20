@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{257935A8-444D-4457-9FD1-3B4E193C25D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>order</RootNamespace>
+    <AssemblyName>order</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.54.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="common\ConvertTime.cs" />
+    <Compile Include="controller\EditBusinessInfo.cs" />
+    <Compile Include="controller\EditGoodsInfocs.cs" />
+    <Compile Include="controller\EditUserInfo.cs" />
+    <Compile Include="controller\LoginController.cs" />
+    <Compile Include="controller\MainController.cs" />
+    <Compile Include="controller\ShowMessage.cs" />
+    <Compile Include="Entity\AdminInfo.cs" />
+    <Compile Include="Entity\BusinessInfoEntity.cs" />
+    <Compile Include="Entity\adminInfoEntity.cs" />
+    <Compile Include="Entity\GoodsInfoEntity.cs" />
+    <Compile Include="Entity\UserInfoEntity.cs" />
+    <Compile Include="model\ExecuteSql.cs" />
+    <Compile Include="model\Login.cs" />
+    <Compile Include="model\UserInfo.cs" />
+    <Compile Include="view\BusinessInfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\BusinessInfoEdit.Designer.cs">
+      <DependentUpon>BusinessInfoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\BusinessRecordEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\BusinessRecordEdit.Designer.cs">
+      <DependentUpon>BusinessRecordEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="view\LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\OutBussiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\OutBussiness.Designer.cs">
+      <DependentUpon>OutBussiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\UserInfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\UserInfoEdit.Designer.cs">
+      <DependentUpon>UserInfoEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\Report1.rdlc" />
+    <EmbeddedResource Include="view\BusinessInfoEdit.resx">
+      <DependentUpon>BusinessInfoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\BusinessRecordEdit.resx">
+      <DependentUpon>BusinessRecordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\OutBussiness.resx">
+      <DependentUpon>OutBussiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\UserInfoEdit.resx">
+      <DependentUpon>UserInfoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\Microsoft.ReportViewer.WinForms.fakes" />
+    <None Include="Properties\DataSources\order.Entity.BusinessInfoEntity.datasource" />
+    <None Include="Properties\DataSources\order.view.DataSet1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="view\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="view\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="view\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,94 @@
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\bin\Debug\order.exe.config
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.csprojResolveAssemblyReference.cache
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.Properties.Resources.resources
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.csproj.GenerateResource.Cache
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\bin\Debug\order.exe
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\bin\Debug\order.pdb
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.exe
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.pdb
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.view.BusinessInfoEdit.resources
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.view.BusinessRecordEdit.resources
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.LoginWindow.resources
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.view.Main.resources
+d:\users\huzhou\documents\visual studio 2013\Projects\order\order\obj\Debug\order.view.UserInfoEdit.resources
+C:\Users\peng\Downloads\order\order\bin\Debug\order.exe.config
+C:\Users\peng\Downloads\order\order\obj\Debug\order.exe
+C:\Users\peng\Downloads\order\order\obj\Debug\order.pdb
+C:\Users\peng\Downloads\order\order\bin\Debug\order.exe
+C:\Users\peng\Downloads\order\order\bin\Debug\order.pdb
+C:\Users\peng\Downloads\order\order\obj\Debug\order.csprojResolveAssemblyReference.cache
+C:\Users\peng\Downloads\order\order\obj\Debug\order.view.BusinessInfoEdit.resources
+C:\Users\peng\Downloads\order\order\obj\Debug\order.view.BusinessRecordEdit.resources
+C:\Users\peng\Downloads\order\order\obj\Debug\order.LoginWindow.resources
+C:\Users\peng\Downloads\order\order\obj\Debug\order.Properties.Resources.resources
+C:\Users\peng\Downloads\order\order\obj\Debug\order.view.Main.resources
+C:\Users\peng\Downloads\order\order\obj\Debug\order.view.UserInfoEdit.resources
+C:\Users\peng\Downloads\order\order\obj\Debug\order.csproj.GenerateResource.Cache
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\bin\Debug\order.exe.config
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.exe
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.pdb
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\bin\Debug\order.exe
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\bin\Debug\order.pdb
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.csprojResolveAssemblyReference.cache
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.view.BusinessInfoEdit.resources
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.view.BusinessRecordEdit.resources
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.LoginWindow.resources
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.Properties.Resources.resources
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.view.Main.resources
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.view.UserInfoEdit.resources
+D:\Users\huzhou\Documents\Visual Studio 2013\Projects\order\order\order\obj\Debug\order.csproj.GenerateResource.Cache
+C:\Users\peng\Downloads\order\order\order\bin\Debug\order.exe.config
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.exe
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.pdb
+C:\Users\peng\Downloads\order\order\order\bin\Debug\order.exe
+C:\Users\peng\Downloads\order\order\order\bin\Debug\order.pdb
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.csprojResolveAssemblyReference.cache
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.view.BusinessInfoEdit.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.view.BusinessRecordEdit.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.LoginWindow.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.Properties.Resources.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.view.Main.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.view.UserInfoEdit.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.csproj.GenerateResource.Cache
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.view.Print.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\order.view.OutBussiness.resources
+C:\Users\peng\Downloads\order\order\order\obj\Debug\RdlCompile.cache
+C:\Users\peng\Downloads\order\order\order\obj\Debug\RdlCompile.compiled
+d:\Users\huzhou\Desktop\order (2)\order\order\order\bin\Debug\order.exe.config
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.exe
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.pdb
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.csprojResolveAssemblyReference.cache
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.view.BusinessInfoEdit.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.view.BusinessRecordEdit.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.LoginWindow.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.Properties.Resources.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.view.Main.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.view.OutBussiness.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.view.Print.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.view.UserInfoEdit.resources
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.csproj.GenerateResource.Cache
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\RdlCompile.cache
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\RdlCompile.compiled
+d:\Users\huzhou\Desktop\order (2)\order\order\order\bin\Debug\order.exe
+d:\Users\huzhou\Desktop\order (2)\order\order\order\bin\Debug\order.pdb
+d:\Users\huzhou\Desktop\order (2)\order\order\order\bin\Debug\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.fakesconfig
+d:\Users\huzhou\Desktop\order (2)\order\order\order\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\order.csprojFakesResolveAssemblyReference.cache
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\fakes.args
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.QualityTools.Testing.Fakes.dll
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.dll
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.fakesconfig
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.pdb
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.xml
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\System.Data.SQLite.DLL
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.ah
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.ch
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.cs
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.csproj
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.fakes
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.fakesconfig
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\f.snk
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\f.csproj.FileListAbsolute.txt
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\f.csprojResolveAssemblyReference.cache
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.dll
+d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.pdb
