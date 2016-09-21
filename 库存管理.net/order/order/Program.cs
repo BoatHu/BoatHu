@@ -16,6 +16,7 @@ namespace order
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(LoginWindow.getInstance());
             Application.Run(new Main());
         }
     }

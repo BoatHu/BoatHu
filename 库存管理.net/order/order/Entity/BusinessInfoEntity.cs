@@ -33,7 +33,7 @@ namespace order.Entity
             receiverName = null;
             senderPhone = null;
             receiverPhone = null;
-            exchangeTime = new DateTime();
+            exchangeTime = DateTime.MinValue;
             status = null;
         }
 

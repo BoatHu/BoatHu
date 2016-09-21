@@ -36,24 +36,58 @@ namespace order.controller
             }
             return new ExecuteSql().selectUserInfo(sql);
         }
-        public DataSet selectBusinessRecordList(string orderId, DateTime startTime, DateTime endTime, bool isLoadTime)
+        public DataSet selectBusinessRecordList(string receiverName ,string orderId, DateTime startTime, DateTime endTime, bool isLoadTime)
         {
             string sql = null;
             if (isLoadTime)
             {
                 sql = "select * from orderInfo  " +
                     "where exchangeTime > " + ConvertTime.ConvertDataTimeLong(startTime) + " and  exchangeTime< " + ConvertTime.ConvertDataTimeLong(endTime);
-                if(!String.IsNullOrEmpty(orderId))
+                if(!String.IsNullOrEmpty(orderId)&&!String.IsNullOrEmpty(receiverName))
                 {
-                    sql += " and orderId like '%" +orderId+"%'";
+                    sql += " and receiverName like '%";
+                    sql += receiverName;
+                    sql += "%'";
+                    sql += " and orderId like '%";
+                    sql += orderId;
+                    sql += "%'";
+                }
+                else if(!String.IsNullOrEmpty(orderId))
+                {
+                    sql += " and orderId like '%";
+                    sql += orderId;
+                    sql += "%'";
+                }
+                else if (!String.IsNullOrEmpty(receiverName))
+                {
+                    sql += " and receiverName like '%";
+                    sql += receiverName;
+                    sql += "%'";
                 }
             }
             else
             {
                 sql = "select * from orderInfo ";
-                if (!String.IsNullOrEmpty(orderId))
+                if (!String.IsNullOrEmpty(orderId) && !String.IsNullOrEmpty(receiverName))
                 {
-                    sql += " where orderId like '%"+orderId+"%'";
+                    sql += " where receiverName like '%";
+                    sql += receiverName;
+                    sql += "%'";
+                    sql += " and orderId like '%";
+                    sql += orderId;
+                    sql += "%'";
+                }
+                else if (!String.IsNullOrEmpty(orderId))
+                {
+                    sql += " where orderId like '%";
+                    sql += orderId;
+                    sql += "%'";
+                }
+                else if (!String.IsNullOrEmpty(receiverName))
+                {
+                    sql += " where receiverName like '%";
+                    sql += receiverName;
+                    sql += "%'";
                 }
             }
             return new ExecuteSql().selectOrderInfo(sql);
