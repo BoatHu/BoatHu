@@ -69,7 +69,6 @@ E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.LoginWindow.resources
 E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.Properties.Resources.resources
 E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.view.Main.resources
 E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.view.OutBussiness.resources
-E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.view.Print.resources
 E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.view.UserInfoEdit.resources
 E:\gitHubTest\库存管理.net\order\order\obj\Debug\order.csproj.GenerateResource.Cache
 E:\gitHubTest\库存管理.net\order\order\obj\Debug\RdlCompile.cache

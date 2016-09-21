@@ -134,7 +134,8 @@ namespace order.view
 
         private void button9_Click(object sender, EventArgs e)
         {
-            new BusinessRecordEdit().Show();
+            reloadGoodsInfoList();
+            new BusinessRecordEdit(goodsInfodata).Show();
         }
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)  
         {
@@ -249,7 +250,6 @@ namespace order.view
                 saveValueIntoEntity(row);
                 new OutBussiness().Show();
             }
-            BusinessInfoEntity.reset();
         }
         private void saveValueIntoEntity(DataRow row)
         {
@@ -330,6 +330,11 @@ namespace order.view
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            reloadBusinessResuletList();
+        }
+
+        private void receiverName_TextChanged(object sender, EventArgs e)
         {
             reloadBusinessResuletList();
         }

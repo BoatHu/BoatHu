@@ -31,10 +31,9 @@ namespace order
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminInfo admin = new AdminInfo();
-            admin.userPassword = this.passWord.Text;
-            admin.userName = this.adminName.Text;
-            new LoginController(admin,this).login();
+            AdminInfo.userPassword = this.passWord.Text;
+            AdminInfo.userName = this.adminName.Text;
+            new LoginController(this).login();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -10,20 +10,18 @@ namespace order.controller
 {
     class LoginController
     {
-        private AdminInfo adminInfo;
         private LoginWindow loginWindow;
-        public LoginController(AdminInfo adminInfo, LoginWindow loginWindow)
+        public LoginController(LoginWindow loginWindow)
         {
-            this.adminInfo = adminInfo;
             this.loginWindow = loginWindow;
         }
         public void login()
         {
             Login loginModel = new Login();
-            if (loginModel.login(adminInfo.userName, adminInfo.userPassword))
+            if (loginModel.login(AdminInfo.userName, AdminInfo.userPassword))
             {
                 loginWindow.Hide();
-                BusinessInfoEntity.orderOperator = adminInfo.userName;
+                BusinessInfoEntity.orderOperator = AdminInfo.userName;
                 new Main().Show();
             }
             else

@@ -50,5 +50,10 @@ namespace order.view
                 ShowMessage.showMessage("增加或者更新成功");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

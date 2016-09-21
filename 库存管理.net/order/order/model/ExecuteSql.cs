@@ -8,6 +8,7 @@ using System.Data;
 using order.controller;
 using System.Windows.Forms;
 using order.common;
+using order.Entity;
 namespace order.model
 {
     class ExecuteSql
@@ -15,7 +16,12 @@ namespace order.model
         private SQLiteConnection conn = null;
         public ExecuteSql()
         {
-            string dbPath = "Data Source =" + Environment.CurrentDirectory + "\\order_db.db";
+            string dbPath = "Data Source =" + Environment.CurrentDirectory + "\\pro_order_db.db";
+            if (AdminInfo.userName == "huzhou")
+            {
+              dbPath  = "Data Source =" + Environment.CurrentDirectory + "\\order_db.db";
+            }
+             
             conn = new SQLiteConnection(dbPath);//创建数据库实例，指定文件位置  
         }
         public bool execute(string sql)

@@ -107,12 +107,6 @@
     <Compile Include="view\OutBussiness.Designer.cs">
       <DependentUpon>OutBussiness.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Print.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\Print.Designer.cs">
-      <DependentUpon>Print.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\UserInfoEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,9 +137,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\OutBussiness.resx">
       <DependentUpon>OutBussiness.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\Print.resx">
-      <DependentUpon>Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\UserInfoEdit.resx">
       <DependentUpon>UserInfoEdit.cs</DependentUpon>

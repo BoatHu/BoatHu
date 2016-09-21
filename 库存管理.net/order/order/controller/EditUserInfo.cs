@@ -24,7 +24,7 @@ namespace order.controller
                     UserInfoEntity.userName + "',userAddress = '" +
                     UserInfoEntity.userAddress + "',userSex ='" +
                     UserInfoEntity.userSex + "',userPhone = '" +
-                    UserInfoEntity.userPhone + "',userPhone = '" +
+                    UserInfoEntity.userPhone + "',userWechat = '" +
                     UserInfoEntity.userWechat+"' WHERE userId = " +
                     UserInfoEntity.userId;
             }

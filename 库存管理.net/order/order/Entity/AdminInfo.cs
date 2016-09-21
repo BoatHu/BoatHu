@@ -8,7 +8,7 @@ namespace order.Entity
 {
     class AdminInfo
     {
-        public string userName { get; set; }
-        public string userPassword { get; set; }
+        public static string userName { get; set; }
+        public static string userPassword { get; set; }
     }
 }

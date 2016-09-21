@@ -14,11 +14,15 @@ namespace order.view
 {
     public partial class BusinessRecordEdit : Form
     {
-        public BusinessRecordEdit()
+        class GoodInfo {
+            public string price { get; set; }
+            public string name { get; set; }
+        }
+        DataSet goodRecordList;
+        List<GoodInfo> goodsNameList;
+        public BusinessRecordEdit(DataSet goodRecordList)
         {
             InitializeComponent();
-            this.goodname.Text = BusinessInfoEntity.goodsName;
-            this.price.Text = BusinessInfoEntity.price;
             this.amount.Text = BusinessInfoEntity.orderAmount;
             this.sendAdress.Text = BusinessInfoEntity.sendAdress;
             this.receiveAdress.Text = BusinessInfoEntity.receiveAdress;
@@ -26,7 +30,39 @@ namespace order.view
             this.receiverName.Text = BusinessInfoEntity.receiverName;
             this.senderPhone.Text = BusinessInfoEntity.senderPhone;
             this.receiverPhone.Text = BusinessInfoEntity.receiverPhone;
-            if(BusinessInfoEntity.exchangeTime.ToString().Equals("0001/1/1 0:00:00"))
+            this.goodRecordList = goodRecordList;
+            goodsNameList = new List<GoodInfo>(); 
+            if(BusinessInfoEntity.exchangeTime.Equals(DateTime.MinValue))
+            {
+                this.orderTime.Value = DateTime.Now;
+            }
+            else
+            {
+                this.orderTime.Value = BusinessInfoEntity.exchangeTime;
+            }
+            if (BusinessInfoEntity.status == null)
+            {
+                this.Status.Checked = false;
+            }
+            else
+            {
+                this.Status.Checked = bool.Parse(BusinessInfoEntity.status);
+            }
+            loadList();
+        }
+        public BusinessRecordEdit()
+        {
+            InitializeComponent();
+            this.goodNameList.Text = BusinessInfoEntity.goodsName;
+            this.businessPrice.Text = BusinessInfoEntity.price;
+            this.amount.Text = BusinessInfoEntity.orderAmount;
+            this.sendAdress.Text = BusinessInfoEntity.sendAdress;
+            this.receiveAdress.Text = BusinessInfoEntity.receiveAdress;
+            this.senderName.Text = BusinessInfoEntity.senderName;
+            this.receiverName.Text = BusinessInfoEntity.receiverName;
+            this.senderPhone.Text = BusinessInfoEntity.senderPhone;
+            this.receiverPhone.Text = BusinessInfoEntity.receiverPhone;
+            if (BusinessInfoEntity.exchangeTime.Equals(DateTime.MinValue))
             {
                 this.orderTime.Value = DateTime.Now;
             }
@@ -43,6 +79,19 @@ namespace order.view
                 this.Status.Checked = bool.Parse(BusinessInfoEntity.status);
             }
         }
+        public void loadList()
+        {
+            foreach (DataRow row in goodRecordList.Tables[0].Rows)
+            {
+                GoodInfo goodInfo = new GoodInfo();
+                goodInfo.name = (string)row[1];
+                goodInfo.price = (string)row[2];
+                goodsNameList.Add(goodInfo);
+                this.goodNameList.Items.Add(goodInfo.name);
+            }
+            this.goodNameList.SelectedItem = 0;
+        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,8 +100,8 @@ namespace order.view
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BusinessInfoEntity.goodsName = this.goodname.Text;
-            BusinessInfoEntity.price = this.price.Text;
+            BusinessInfoEntity.goodsName = this.goodNameList.Text;
+            BusinessInfoEntity.price = this.businessPrice.Text;
             BusinessInfoEntity.orderAmount = this.amount.Text;
             BusinessInfoEntity.sendAdress = this.sendAdress.Text;
             BusinessInfoEntity.receiveAdress = this.receiveAdress.Text;
@@ -75,7 +124,13 @@ namespace order.view
 
         private void BusinessRecordEdit_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = this.goodNameList.SelectedIndex;
+            this.businessPrice.Text = goodsNameList[index].price;
         }
     }
 }

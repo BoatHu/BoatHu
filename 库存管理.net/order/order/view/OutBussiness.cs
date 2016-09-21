@@ -69,8 +69,8 @@ namespace order.view
             
             // //this.reportViewer1.LocalReport.EnableExternalImages = true;
 
-            // List<ReportParameter> para = new List<ReportParameter>();
-            //// 这里是添加两个字段
+            //List<ReportParameter> para = new List<ReportParameter>();
+            // 这里是添加两个字段
             //para.Add(new ReportParameter("id", "fishkel"));
             //para.Add(new ReportParameter("name", "123"));
             //// 这里是添加两个数据源，两个list
@@ -78,11 +78,11 @@ namespace order.view
             ////list.Add(new TestReport() { a = "20100201", b = 0.1, c = 0.2, d = 0.1 });
             ////list.Add(new TestReport() { a = "20100202", b = 0.1, c = 0.2, d = 0.2 });
             ////list.Add(new TestReport() { a = "20100203", b = 0.1, c = 0.4, d = 0.2 });
-            // //var test = new List<TestReport>() {new TestReport(){ a = "20100201", b = 0.33, c = 0.33, d = 0.33 }};
-            // //this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("id", "haha"));
-            // this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", dt));
-            // this.reportViewer1.LocalReport.SetParameters(para);
-            // this.reportViewer1.RefreshReport();
+            ////var test = new List<TestReport>() {new TestReport(){ a = "20100201", b = 0.33, c = 0.33, d = 0.33 }};
+            ////this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("id", "haha"));
+            ////this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", dt));
+            //this.reportViewer1.LocalReport.SetParameters(para);
+            //this.reportViewer1.RefreshReport();
 
 
         }
