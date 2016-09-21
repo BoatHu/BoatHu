@@ -1,8 +1,0 @@
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.xml
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.dll
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.pdb
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\Microsoft.QualityTools.Testing.Fakes.dll
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\b\System.Data.SQLite.DLL
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\f.csprojResolveAssemblyReference.cache
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.dll
-d:\Users\huzhou\Desktop\order (2)\order\order\order\obj\Debug\Fakes\mrvwf\o\Microsoft.ReportViewer.WinForms.11.0.0.0.Fakes.pdb

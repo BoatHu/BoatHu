@@ -63,6 +63,7 @@ namespace order.model
                 dt.Columns.Add("会员性别", typeof(string));
                 dt.Columns.Add("会员电话", typeof(string));
                 dt.Columns.Add("会员地址", typeof(string));
+                dt.Columns.Add("微信号", typeof(string));
                 while (reader.Read())
                 {       
                     //创建行
@@ -73,6 +74,7 @@ namespace order.model
                     row[2] = reader["userSex"];
                     row[3] = reader["userPhone"];
                     row[4] = reader["userAddress"];
+                    row[5] = reader["userWechat"];
                     //将行添加到数据表的行集合中
                     dt.Rows.Add(row);       
                 }

@@ -26,7 +26,7 @@ namespace order.view
             this.receiverName.Text = BusinessInfoEntity.receiverName;
             this.senderPhone.Text = BusinessInfoEntity.senderPhone;
             this.receiverPhone.Text = BusinessInfoEntity.receiverPhone;
-            if(BusinessInfoEntity.exchangeTime == DateTime.MinValue)
+            if(BusinessInfoEntity.exchangeTime.ToString().Equals("0001/1/1 0:00:00"))
             {
                 this.orderTime.Value = DateTime.Now;
             }
@@ -74,11 +74,6 @@ namespace order.view
         }
 
         private void BusinessRecordEdit_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void orderTime_ValueChanged(object sender, EventArgs e)
         {
 
         }

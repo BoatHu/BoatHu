@@ -13,6 +13,7 @@ namespace order.Entity
         public static string userSex { get; set; }
         public static string userPhone { get; set; }
         public static string userAddress { get; set; }
+        public static string userWechat { get; set; }
         public static void reset()
         {
             userId = null;
@@ -20,6 +21,7 @@ namespace order.Entity
             userSex = null;
             userPhone = null;
             userAddress = null;
+            userWechat = null;
         }
  
     }

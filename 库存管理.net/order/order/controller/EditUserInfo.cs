@@ -14,8 +14,8 @@ namespace order.controller
             string sql = null;
             if (String.IsNullOrEmpty(UserInfoEntity.userId))
             {
-                sql = "insert into userinfo(userAddress,userName,userSex,userPhone)values('" +
-                UserInfoEntity.userAddress + "','" + UserInfoEntity.userName + "','" + UserInfoEntity.userSex + "','" + UserInfoEntity.userPhone + "')";
+                sql = "insert into userinfo(userAddress,userName,userSex,userPhone,userWechat)values('" +
+                UserInfoEntity.userAddress + "','" + UserInfoEntity.userName + "','" + UserInfoEntity.userSex + "','" + UserInfoEntity.userPhone +"','" +UserInfoEntity.userWechat+ "')";
 
             }
             else
@@ -24,7 +24,8 @@ namespace order.controller
                     UserInfoEntity.userName + "',userAddress = '" +
                     UserInfoEntity.userAddress + "',userSex ='" +
                     UserInfoEntity.userSex + "',userPhone = '" +
-                    UserInfoEntity.userPhone + "' WHERE userId = " +
+                    UserInfoEntity.userPhone + "',userPhone = '" +
+                    UserInfoEntity.userWechat+"' WHERE userId = " +
                     UserInfoEntity.userId;
             }
             UserInfoEntity.reset();

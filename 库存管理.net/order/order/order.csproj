@@ -32,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
@@ -151,7 +150,6 @@
     <EmbeddedResource Include="view\UserInfoEdit.resx">
       <DependentUpon>UserInfoEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <Fakes Include="Fakes\Microsoft.ReportViewer.WinForms.fakes" />
     <None Include="Properties\DataSources\order.Entity.BusinessInfoEntity.datasource" />
     <None Include="Properties\DataSources\order.view.DataSet1.datasource" />
     <None Include="Properties\Settings.settings">

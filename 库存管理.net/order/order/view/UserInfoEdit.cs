@@ -20,6 +20,7 @@ namespace order.view
             this.phone.Text = UserInfoEntity.userPhone;
             this.sex.Text = UserInfoEntity.userSex;
             this.adress.Text = UserInfoEntity.userAddress;
+            this.userWechat.Text = UserInfoEntity.userWechat;
         }
     
         private void UserInfoEdit_Load(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace order.view
             UserInfoEntity.userPhone = this.phone.Text;
             UserInfoEntity.userSex = this.sex.Text;
             UserInfoEntity.userAddress = this.adress.Text;
+            UserInfoEntity.userWechat = this.userWechat.Text;
             if (new EditUserInfo().saveEditInfo())
             {
                 this.Close();

@@ -26,7 +26,6 @@ namespace order.view
             orderInfoListHasButton = false;
             goodsInfoListHasButton = false;
             chooseMap = new List<string>();
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Formeing);
         }
         //读取用户信息列表
         private void reloadUserInfoResultList()
@@ -43,8 +42,7 @@ namespace order.view
             DateTime endBusinessTime = endTime.Value;
             string orderId = businessId.Text;
             bool isLoadTime = isInTime.Checked;
-            string receiverName = this.receiverName.Text;
-            orderInfodata = maincontroller.selectBusinessRecordList(receiverName,orderId, startBusinesstime, endBusinessTime, isLoadTime);
+            orderInfodata = maincontroller.selectBusinessRecordList(orderId, startBusinesstime, endBusinessTime, isLoadTime);
             orderGridView.DataSource = orderInfodata.Tables[0];
         }
         //读取商品信息列表
@@ -52,7 +50,7 @@ namespace order.view
         {
             string goodsId = this.goodId.Text;
             string goodsName = this.goodsName.Text;
-            goodsInfodata = maincontroller.selectGoodInfoList(goodsId, goodsName);
+            goodsInfodata = maincontroller.selectGoodInfoList(goodsId,goodsName);
             goodsInfoGridView.DataSource = goodsInfodata.Tables[0];
         }
         private void Main_Load(object sender, EventArgs e)
@@ -70,12 +68,6 @@ namespace order.view
             delete.UseColumnTextForButtonValue = true;
             delete.Text = "删除";
             this.userInfoGrid.Columns.AddRange(delete);
-            DataGridViewButtonColumn selectThisUser = new DataGridViewButtonColumn();
-            selectThisUser.Name = "selectUserInfo";
-            selectThisUser.HeaderText = "会员交易记录";
-            selectThisUser.UseColumnTextForButtonValue = true;
-            selectThisUser.Text = "查看";
-            this.userInfoGrid.Columns.AddRange(selectThisUser);
         }
 
         private void userInfoGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,6 +80,7 @@ namespace order.view
                 UserInfoEntity.userSex = (string)row[2];
                 UserInfoEntity.userPhone = (string)row[3];
                 UserInfoEntity.userAddress = (string)row[4];
+                UserInfoEntity.userWechat = (string)row[5];
                 new UserInfoEdit().Show();
             }
             if (userInfoGrid.Columns[e.ColumnIndex].Name == "userInfodelete")
@@ -95,14 +88,6 @@ namespace order.view
                 DataRow row = userInfodata.Tables[0].Rows[e.RowIndex];
                 UserInfoEntity.userId = (string)row[0];
                 new EditUserInfo().deleteUserInfo();
-            }
-            if (userInfoGrid.Columns[e.ColumnIndex].Name == "selectUserInfo")
-            {
-                this.mainWindow.SelectTab("businessRecord");
-                DataRow row = userInfodata.Tables[0].Rows[e.RowIndex];
-                string userName = (string)row[1];
-                this.receiverName.Text = userName;
-                reloadBusinessResuletList();
             }
         }
 
@@ -159,18 +144,6 @@ namespace order.view
                     checkBox.HeaderText = "选择";
                     this.orderGridView.Columns.AddRange(checkBox);
                     orderInfoListHasButton = true;
-                    DataGridViewButtonColumn printOutPut = new DataGridViewButtonColumn();
-                    printOutPut.Name = "printOutPut";
-                    printOutPut.HeaderText = "打印";
-                    printOutPut.UseColumnTextForButtonValue = true;
-                    printOutPut.Text = "打印出货单";
-                    this.orderGridView.Columns.AddRange(printOutPut);
-                    DataGridViewButtonColumn printExpress = new DataGridViewButtonColumn();
-                    printExpress.Name = "printExpress";
-                    printExpress.HeaderText = "打印";
-                    printExpress.UseColumnTextForButtonValue = true;
-                    printExpress.Text = "打印快递单";
-                    this.orderGridView.Columns.AddRange(printExpress);
                 }
             }
             else if (this.mainWindow.SelectedTab.Name.Equals("goodsInfo"))
@@ -210,7 +183,19 @@ namespace order.view
             if (orderGridView.Columns[e.ColumnIndex].Name == "orderInfoedit")
             {
                 DataRow row = orderInfodata.Tables[0].Rows[e.RowIndex];
-                saveValueIntoEntity(row);
+                BusinessInfoEntity.orderId = (string)row[0];
+                BusinessInfoEntity.status = (string)row[1];
+                BusinessInfoEntity.goodsName = (string)row[2];
+                BusinessInfoEntity.price = (string)row[3];
+                BusinessInfoEntity.orderAmount = (string)row[4];
+                BusinessInfoEntity.receiveAdress = (string)row[5];
+                BusinessInfoEntity.receiverName = (string)row[6];
+                BusinessInfoEntity.receiverPhone = (string)row[7];
+                BusinessInfoEntity.sendAdress = (string)row[8];
+                BusinessInfoEntity.senderName = (string)row[9];
+                BusinessInfoEntity.senderPhone = (string)row[10];
+                BusinessInfoEntity.exchangeTime = Convert.ToDateTime((string)row[11]);
+                BusinessInfoEntity.orderOperator = (string)row[12];
                 new BusinessRecordEdit().Show();
             }
             if (orderGridView.Columns[e.ColumnIndex].Name == "orderInfodelete")
@@ -232,40 +217,8 @@ namespace order.view
                     chooseMap.Add(orderId);
                 }
             }
-            if (orderGridView.Columns[e.ColumnIndex].Name == "printOutPut")
-            {
-                DataRow row = orderInfodata.Tables[0].Rows[e.RowIndex];
-                saveValueIntoEntity(row); 
-                string goodsName = (string)row[2];
-                if (new EditGoodsInfocs().reduceGoodsAmount(goodsName))
-                {
-                    new OutBussiness().Show();
-                }
-            }
-            if (orderGridView.Columns[e.ColumnIndex].Name == "printExpress")
-            {
-                DataRow row = orderInfodata.Tables[0].Rows[e.RowIndex];
-                saveValueIntoEntity(row);
-                new OutBussiness().Show();
-            }
-            BusinessInfoEntity.reset();
         }
-        private void saveValueIntoEntity(DataRow row)
-        {
-            BusinessInfoEntity.orderId = (string)row[0];
-            BusinessInfoEntity.status = (string)row[1];
-            BusinessInfoEntity.goodsName = (string)row[2];
-            BusinessInfoEntity.price = (string)row[3];
-            BusinessInfoEntity.orderAmount = (string)row[4];
-            BusinessInfoEntity.receiveAdress = (string)row[5];
-            BusinessInfoEntity.receiverName = (string)row[6];
-            BusinessInfoEntity.receiverPhone = (string)row[7];
-            BusinessInfoEntity.sendAdress = (string)row[8];
-            BusinessInfoEntity.senderName = (string)row[9];
-            BusinessInfoEntity.senderPhone = (string)row[10];
-            BusinessInfoEntity.exchangeTime = Convert.ToDateTime((string)row[11]);
-            BusinessInfoEntity.orderOperator = (string)row[12];
-        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             //将map中的元素的状态设置为已读
@@ -322,16 +275,7 @@ namespace order.view
         private void userInfo_Click(object sender, EventArgs e)
         {
 
-        }
-        private void MainForm_Formeing(object sender, FormClosingEventArgs e)
-        {
-            LoginWindow.getInstance().Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            reloadBusinessResuletList();
-        }
+        }  
 
     }
 }

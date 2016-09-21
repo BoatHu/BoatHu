@@ -15,20 +15,12 @@ namespace order
 {
     public partial class LoginWindow : Form
     {
-        private static LoginWindow loginWindow;
+
         public LoginWindow()
         {
             InitializeComponent();
         }
 
-        public static LoginWindow getInstance()
-        {
-            if (loginWindow == null)
-            {
-                loginWindow = new LoginWindow();
-            }
-            return loginWindow;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             AdminInfo admin = new AdminInfo();
