@@ -14,14 +14,13 @@ namespace order.model
     class ExecuteSql
     {
         private SQLiteConnection conn = null;
+        private string dbPath = null;
         public ExecuteSql()
         {
-            string dbPath = "Data Source =" + Environment.CurrentDirectory + "\\pro_order_db.db";
-            if (AdminInfo.userName == "huzhou")
+            if (string.IsNullOrEmpty(dbPath))
             {
-              dbPath  = "Data Source =" + Environment.CurrentDirectory + "\\order_db.db";
+                dbPath = "Data Source =" + Environment.CurrentDirectory + "\\pro_order_db.db";   
             }
-             
             conn = new SQLiteConnection(dbPath);//创建数据库实例，指定文件位置  
         }
         public bool execute(string sql)
@@ -221,6 +220,10 @@ namespace order.model
                 SQLiteDataReader reader = cmdCreateTable.ExecuteReader();
                 if (reader.Read())
                 {
+                    if(reader["Env"].Equals("Fws"))
+                    {
+                        dbPath = "Data Source =" + Environment.CurrentDirectory + "\\order_db.db"; 
+                    }
                     return true;
                 }
                 else
