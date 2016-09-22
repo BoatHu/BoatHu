@@ -59,6 +59,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.goodsName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.mainWindow.SuspendLayout();
             this.userInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoGrid)).BeginInit();
@@ -97,7 +99,7 @@
             this.userInfo.Location = new System.Drawing.Point(4, 22);
             this.userInfo.Name = "userInfo";
             this.userInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.userInfo.Size = new System.Drawing.Size(1183, 526);
+            this.userInfo.Size = new System.Drawing.Size(1224, 561);
             this.userInfo.TabIndex = 0;
             this.userInfo.Text = "会员信息";
             this.userInfo.UseVisualStyleBackColor = true;
@@ -177,6 +179,8 @@
             // 
             // businessRecord
             // 
+            this.businessRecord.Controls.Add(this.button5);
+            this.businessRecord.Controls.Add(this.button4);
             this.businessRecord.Controls.Add(this.label6);
             this.businessRecord.Controls.Add(this.receiverName);
             this.businessRecord.Controls.Add(this.isInTime);
@@ -339,7 +343,7 @@
             this.goodsInfo.Location = new System.Drawing.Point(4, 22);
             this.goodsInfo.Name = "goodsInfo";
             this.goodsInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.goodsInfo.Size = new System.Drawing.Size(1183, 526);
+            this.goodsInfo.Size = new System.Drawing.Size(1224, 561);
             this.goodsInfo.TabIndex = 2;
             this.goodsInfo.Text = "商品信息";
             this.goodsInfo.UseVisualStyleBackColor = true;
@@ -417,6 +421,28 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "商品名字";
             // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(715, 520);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "打印出货单";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Location = new System.Drawing.Point(846, 520);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "打印快递单";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -473,5 +499,7 @@
         private System.Windows.Forms.CheckBox isInTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox receiverName;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }

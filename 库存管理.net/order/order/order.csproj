@@ -113,7 +113,6 @@
     <Compile Include="view\UserInfoEdit.Designer.cs">
       <DependentUpon>UserInfoEdit.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\Report1.rdlc" />
     <EmbeddedResource Include="view\BusinessInfoEdit.resx">
       <DependentUpon>BusinessInfoEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +137,7 @@
     <EmbeddedResource Include="view\OutBussiness.resx">
       <DependentUpon>OutBussiness.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Report1.rdlc" />
     <EmbeddedResource Include="view\UserInfoEdit.resx">
       <DependentUpon>UserInfoEdit.cs</DependentUpon>
     </EmbeddedResource>

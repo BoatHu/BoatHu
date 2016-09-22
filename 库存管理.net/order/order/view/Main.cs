@@ -19,13 +19,14 @@ namespace order.view
         private DataSet goodsInfodata;
         private bool orderInfoListHasButton;
         private bool goodsInfoListHasButton;
-        private List<string> chooseMap ;
+        private List<DataRow> chooseMap;
+
         public Main()
         {
             InitializeComponent();
             orderInfoListHasButton = false;
             goodsInfoListHasButton = false;
-            chooseMap = new List<string>();
+            chooseMap = new List<DataRow>();
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Formeing);
         }
         //读取用户信息列表
@@ -44,7 +45,7 @@ namespace order.view
             string orderId = businessId.Text;
             bool isLoadTime = isInTime.Checked;
             string receiverName = this.receiverName.Text;
-            orderInfodata = maincontroller.selectBusinessRecordList(receiverName,orderId, startBusinesstime, endBusinessTime, isLoadTime);
+            orderInfodata = maincontroller.selectBusinessRecordList(receiverName, orderId, startBusinesstime, endBusinessTime, isLoadTime);
             orderGridView.DataSource = orderInfodata.Tables[0];
         }
         //读取商品信息列表
@@ -52,7 +53,7 @@ namespace order.view
         {
             string goodsId = this.goodId.Text;
             string goodsName = this.goodsName.Text;
-            goodsInfodata = maincontroller.selectGoodInfoList(goodsId,goodsName);
+            goodsInfodata = maincontroller.selectGoodInfoList(goodsId, goodsName);
             goodsInfoGridView.DataSource = goodsInfodata.Tables[0];
         }
         private void Main_Load(object sender, EventArgs e)
@@ -137,7 +138,7 @@ namespace order.view
             reloadGoodsInfoList();
             new BusinessRecordEdit(goodsInfodata).Show();
         }
-        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)  
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.mainWindow.SelectedTab.Name.Equals("businessRecord"))
             {
@@ -160,19 +161,18 @@ namespace order.view
                     checkBox.Name = "orderChecked";
                     checkBox.HeaderText = "选择";
                     this.orderGridView.Columns.AddRange(checkBox);
-                    orderInfoListHasButton = true;
-                    DataGridViewButtonColumn printOutPut = new DataGridViewButtonColumn();
-                    printOutPut.Name = "printOutPut";
-                    printOutPut.HeaderText = "打印";
-                    printOutPut.UseColumnTextForButtonValue = true;
-                    printOutPut.Text = "打印出货单";
-                    this.orderGridView.Columns.AddRange(printOutPut);
-                    DataGridViewButtonColumn printExpress = new DataGridViewButtonColumn();
-                    printExpress.Name = "printExpress";
-                    printExpress.HeaderText = "打印";
-                    printExpress.UseColumnTextForButtonValue = true;
-                    printExpress.Text = "打印快递单";
-                    this.orderGridView.Columns.AddRange(printExpress);
+                    //DataGridViewButtonColumn printOutPut = new DataGridViewButtonColumn();
+                    //printOutPut.Name = "printOutPut";
+                    //printOutPut.HeaderText = "打印";
+                    //printOutPut.UseColumnTextForButtonValue = true;
+                    //printOutPut.Text = "打印出货单";
+                    //this.orderGridView.Columns.AddRange(printOutPut);
+                    //DataGridViewButtonColumn printExpress = new DataGridViewButtonColumn();
+                    //printExpress.Name = "printExpress";
+                    //printExpress.HeaderText = "打印";
+                    //printExpress.UseColumnTextForButtonValue = true;
+                    //printExpress.Text = "打印快递单";
+                    //this.orderGridView.Columns.AddRange(printExpress);
                 }
             }
             else if (this.mainWindow.SelectedTab.Name.Equals("goodsInfo"))
@@ -224,31 +224,14 @@ namespace order.view
             if (orderGridView.Columns[e.ColumnIndex].Name == "orderChecked")
             {
                 DataRow row = orderInfodata.Tables[0].Rows[e.RowIndex];
-                string orderId = (string)row[0];
-                if (chooseMap.Contains(orderId))
+                if (chooseMap.Contains(row))
                 {
-                    chooseMap.Remove(orderId);
+                    chooseMap.Remove(row);
                 }
                 else
                 {
-                    chooseMap.Add(orderId);
+                    chooseMap.Add(row);
                 }
-            }
-            if (orderGridView.Columns[e.ColumnIndex].Name == "printOutPut")
-            {
-                DataRow row = orderInfodata.Tables[0].Rows[e.RowIndex];
-                saveValueIntoEntity(row); 
-                string goodsName = (string)row[2];
-                if (new EditGoodsInfocs().reduceGoodsAmount(goodsName))
-                {
-                    new OutBussiness().Show();
-                }
-            }
-            if (orderGridView.Columns[e.ColumnIndex].Name == "printExpress")
-            {
-                DataRow row = orderInfodata.Tables[0].Rows[e.RowIndex];
-                saveValueIntoEntity(row);
-                new OutBussiness().Show();
             }
         }
         private void saveValueIntoEntity(DataRow row)
@@ -270,7 +253,12 @@ namespace order.view
         private void button3_Click(object sender, EventArgs e)
         {
             //将map中的元素的状态设置为已读
-            new EditBusinessInfo().setListStatus(chooseMap);
+            List<string> chooseList = new List<string>();
+            foreach (DataRow ite in chooseMap)
+            {
+                chooseList.Add((string)ite[0]);
+            }
+            new EditBusinessInfo().setListStatus(chooseList);
             chooseMap.Clear();
             reloadBusinessResuletList();
         }
@@ -337,6 +325,24 @@ namespace order.view
         private void receiverName_TextChanged(object sender, EventArgs e)
         {
             reloadBusinessResuletList();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            List<string> chooseList = new List<string>();
+            foreach (DataRow ite in chooseMap)
+            {
+                if (!new EditGoodsInfocs().reduceGoodsAmount((string)ite[2]))
+                {
+                    return;
+                }
+            }
+            new OutBussiness(chooseMap).Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new OutBussiness(chooseMap).Show();
         }
 
     }

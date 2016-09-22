@@ -13,22 +13,28 @@ namespace order.view
 {
     public partial class OutBussiness : Form
     {
+        List<DataRow> dataList; 
+        public OutBussiness(List<DataRow> dataList)
+        {
+            InitializeComponent();
+            this.dataList = dataList;
+        }
         public OutBussiness()
         {
             InitializeComponent();
         }
-
         private void OutBussiness_Load(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             //创建DataTable对象
             DataTable dt = new DataTable();
-            //创建列
+            //创建       
             dt.Columns.Add("orderId", typeof(string));
             dt.Columns.Add("status", typeof(string));
             dt.Columns.Add("goodsName", typeof(string));
             dt.Columns.Add("price", typeof(string));
             dt.Columns.Add("orderAmount", typeof(string));
+            dt.Columns.Add("orderMoeny", typeof(string));
             dt.Columns.Add("receiveAdress", typeof(string));
             dt.Columns.Add("receiverName", typeof(string));
             dt.Columns.Add("receiverPhone", typeof(string));
@@ -37,34 +43,41 @@ namespace order.view
             dt.Columns.Add("senderPhone", typeof(string));
             dt.Columns.Add("exchangeTime", typeof(string));
             dt.Columns.Add("orderOperator", typeof(string));
-            DataRow row = dt.NewRow();
-            //添加数据
-            row["orderId"] = BusinessInfoEntity.orderId;
-            row["status"] = BusinessInfoEntity.status;
-            row["goodsName"] = BusinessInfoEntity.goodsName;
-            row["price"] = BusinessInfoEntity.price;
-            row["orderAmount"] = BusinessInfoEntity.orderAmount;
-            row["receiveAdress"] = BusinessInfoEntity.receiveAdress;
-            row["receiverName"] = BusinessInfoEntity.receiverName;
-            row["receiverPhone"] = BusinessInfoEntity.receiverPhone;
-            row["sendAdress"] = BusinessInfoEntity.sendAdress;
-            row["senderName"] = BusinessInfoEntity.senderName;
-            row["senderPhone"] = BusinessInfoEntity.senderPhone;
-            row["exchangeTime"] = DateTime.Now.ToString();
-            row["orderOperator"] = BusinessInfoEntity.orderOperator;
-            dt.Rows.Add(row);
+            double totalMoney = 0;
+            foreach(DataRow ite in dataList)
+            {
+                DataRow row = dt.NewRow();
+                //添加数据
+                row["orderId"] = ite[0];
+                row["status"] = ite[1];
+                row["goodsName"] = ite[2];
+                string price = (string)ite[3];
+                row["price"] = price;
+                string amount = (string)ite[4];
+                row["orderAmount"] = amount;
+                totalMoney += Convert.ToDouble(price) * Convert.ToDouble(amount);
+                row["orderMoeny"] = Convert.ToDouble(price) * Convert.ToDouble(amount);
+                row["receiveAdress"] = ite[5];
+                row["receiverName"] = ite[6];
+                row["receiverPhone"] = ite[7];
+                row["sendAdress"] = ite[8];
+                row["senderName"] = ite[9];
+                row["senderPhone"] = ite[10];
+                row["exchangeTime"] = ite[11];
+                row["orderOperator"] = ite[12];
+                dt.Rows.Add(row);
+            }
             this.reportViewer1.LocalReport.ReportPath = Environment.CurrentDirectory + "\\Report1.rdlc";
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
-
-            int amount =  Convert.ToInt32(BusinessInfoEntity.orderAmount);
-            double price = Convert.ToDouble(BusinessInfoEntity.price);
-            double totalMoney = amount * price;
             List<ReportParameter> para = new List<ReportParameter>();
             para.Add(new ReportParameter("totalMoney", totalMoney.ToString()));
             this.reportViewer1.LocalReport.SetParameters(para);
+
             this.reportViewer1.RefreshReport();
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+
+            //this.reportViewer1.ProcessingMode = ProcessingMode.Local;
 
             
             // //this.reportViewer1.LocalReport.EnableExternalImages = true;

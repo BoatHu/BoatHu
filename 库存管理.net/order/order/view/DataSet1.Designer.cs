@@ -305,6 +305,8 @@ namespace order.view {
             
             private global::System.Data.DataColumn columnorderOperator;
             
+            private global::System.Data.DataColumn columnorderMoeny;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DataTable1DataTable() {
@@ -444,6 +446,14 @@ namespace order.view {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn orderMoenyColumn {
+                get {
+                    return this.columnorderMoeny;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -479,7 +489,7 @@ namespace order.view {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string orderId, string status, string goodsName, string price, string orderAmount, string receiveAdress, string receiverName, string receiverPhone, string sendAdress, string senderName, string senderPhone, string exchangeTime, string orderOperator) {
+            public DataTable1Row AddDataTable1Row(string orderId, string status, string goodsName, string price, string orderAmount, string receiveAdress, string receiverName, string receiverPhone, string sendAdress, string senderName, string senderPhone, string exchangeTime, string orderOperator, string orderMoeny) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         orderId,
@@ -494,7 +504,8 @@ namespace order.view {
                         senderName,
                         senderPhone,
                         exchangeTime,
-                        orderOperator};
+                        orderOperator,
+                        orderMoeny};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -530,6 +541,7 @@ namespace order.view {
                 this.columnsenderPhone = base.Columns["senderPhone"];
                 this.columnexchangeTime = base.Columns["exchangeTime"];
                 this.columnorderOperator = base.Columns["orderOperator"];
+                this.columnorderMoeny = base.Columns["orderMoeny"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -561,6 +573,8 @@ namespace order.view {
                 base.Columns.Add(this.columnexchangeTime);
                 this.columnorderOperator = new global::System.Data.DataColumn("orderOperator", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnorderOperator);
+                this.columnorderMoeny = new global::System.Data.DataColumn("orderMoeny", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorderMoeny);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -911,6 +925,22 @@ namespace order.view {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string orderMoeny {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.orderMoenyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'orderMoeny\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.orderMoenyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsorderIdNull() {
                 return this.IsNull(this.tableDataTable1.orderIdColumn);
             }
@@ -1063,6 +1093,18 @@ namespace order.view {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetorderOperatorNull() {
                 this[this.tableDataTable1.orderOperatorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsorderMoenyNull() {
+                return this.IsNull(this.tableDataTable1.orderMoenyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetorderMoenyNull() {
+                this[this.tableDataTable1.orderMoenyColumn] = global::System.Convert.DBNull;
             }
         }
         
