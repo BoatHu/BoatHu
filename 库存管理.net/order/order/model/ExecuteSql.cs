@@ -14,7 +14,7 @@ namespace order.model
     class ExecuteSql
     {
         private SQLiteConnection conn = null;
-        private string dbPath = null;
+        private static string dbPath = null;
         public ExecuteSql()
         {
             if (string.IsNullOrEmpty(dbPath))

@@ -81,14 +81,19 @@ namespace order.view
         }
         public void loadList()
         {
+            AutoCompleteStringCollection goods = new AutoCompleteStringCollection();
             foreach (DataRow row in goodRecordList.Tables[0].Rows)
             {
                 GoodInfo goodInfo = new GoodInfo();
                 goodInfo.name = (string)row[1];
                 goodInfo.price = (string)row[2];
+                goods.Add(goodInfo.name);
                 goodsNameList.Add(goodInfo);
                 this.goodNameList.Items.Add(goodInfo.name);
             }
+            goodNameList.AutoCompleteMode = AutoCompleteMode.Suggest;
+            goodNameList.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            goodNameList.AutoCompleteCustomSource = goods;
             this.goodNameList.SelectedItem = 0;
         }
         

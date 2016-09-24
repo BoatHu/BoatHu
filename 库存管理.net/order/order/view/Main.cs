@@ -330,6 +330,7 @@ namespace order.view
         private void button4_Click(object sender, EventArgs e)
         {
             List<string> chooseList = new List<string>();
+            //remove reduce module
             foreach (DataRow ite in chooseMap)
             {
                 if (!new EditGoodsInfocs().reduceGoodsAmount((string)ite[2]))
