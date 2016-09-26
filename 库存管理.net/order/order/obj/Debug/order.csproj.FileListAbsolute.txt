@@ -90,3 +90,6 @@ C:\Users\peng\Desktop\order\库存管理.net\order\order\obj\Debug\order.csproj.
 C:\Users\peng\Desktop\order\库存管理.net\order\order\obj\Debug\RdlCompile.cache
 C:\Users\peng\Desktop\order\库存管理.net\order\order\obj\Debug\RdlCompile.compiled
 C:\Users\peng\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.OutGoodsCalcute.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\bin\Debug\order.exe.config
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.exe
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.pdb

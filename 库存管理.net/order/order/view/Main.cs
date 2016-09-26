@@ -17,8 +17,8 @@ namespace order.view
         private DataSet userInfodata;
         private DataSet orderInfodata;
         private DataSet goodsInfodata;
-        private bool orderInfoListHasButton;
-        private bool goodsInfoListHasButton;
+        private static bool orderInfoListHasButton;
+        private static bool goodsInfoListHasButton;
         private List<DataRow> chooseMap;
 
         public Main()
@@ -162,6 +162,7 @@ namespace order.view
                     checkBox.Name = "orderChecked";
                     checkBox.HeaderText = "选择";
                     this.orderGridView.Columns.AddRange(checkBox);
+                    orderInfoListHasButton = true;
                     //DataGridViewButtonColumn printOutPut = new DataGridViewButtonColumn();
                     //printOutPut.Name = "printOutPut";
                     //printOutPut.HeaderText = "打印";
