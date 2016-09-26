@@ -55,6 +55,7 @@
     <Compile Include="controller\EditBusinessInfo.cs" />
     <Compile Include="controller\EditGoodsInfocs.cs" />
     <Compile Include="controller\EditUserInfo.cs" />
+    <Compile Include="controller\GoodsCalculate.cs" />
     <Compile Include="controller\LoginController.cs" />
     <Compile Include="controller\MainController.cs" />
     <Compile Include="controller\ShowMessage.cs" />
@@ -107,6 +108,12 @@
     <Compile Include="view\OutBussiness.Designer.cs">
       <DependentUpon>OutBussiness.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\OutGoodsCalcute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\OutGoodsCalcute.Designer.cs">
+      <DependentUpon>OutGoodsCalcute.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\UserInfoEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +126,7 @@
     <EmbeddedResource Include="view\BusinessRecordEdit.resx">
       <DependentUpon>BusinessRecordEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\GoodsReport.rdlc" />
     <EmbeddedResource Include="view\LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\OutBussiness.resx">
       <DependentUpon>OutBussiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\OutGoodsCalcute.resx">
+      <DependentUpon>OutGoodsCalcute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Report1.rdlc" />
     <EmbeddedResource Include="view\UserInfoEdit.resx">

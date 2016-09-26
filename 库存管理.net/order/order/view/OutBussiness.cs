@@ -25,7 +25,6 @@ namespace order.view
         }
         private void OutBussiness_Load(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
             //创建DataTable对象
             DataTable dt = new DataTable();
             //创建       
@@ -67,7 +66,7 @@ namespace order.view
                 row["orderOperator"] = ite[12];
                 dt.Rows.Add(row);
             }
-            //this.reportViewer1.LocalReport.ReportPath = Environment.CurrentDirectory + "\\Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = Environment.CurrentDirectory + "\\Report1.rdlc";
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
             List<ReportParameter> para = new List<ReportParameter>();

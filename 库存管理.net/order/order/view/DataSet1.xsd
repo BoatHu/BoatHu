@@ -32,6 +32,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="goodsId" msprop:Generator_ColumnVarNameInTable="columngoodsId" msprop:Generator_ColumnPropNameInRow="goodsId" msprop:Generator_ColumnPropNameInTable="goodsIdColumn" msprop:Generator_UserColumnName="goodsId" type="xs:string" minOccurs="0" />
+              <xs:element name="goodsName" msprop:Generator_ColumnVarNameInTable="columngoodsName" msprop:Generator_ColumnPropNameInRow="goodsName" msprop:Generator_ColumnPropNameInTable="goodsNameColumn" msprop:Generator_UserColumnName="goodsName" type="xs:string" minOccurs="0" />
+              <xs:element name="goodsPrice" msprop:Generator_ColumnVarNameInTable="columngoodsPrice" msprop:Generator_ColumnPropNameInRow="goodsPrice" msprop:Generator_ColumnPropNameInTable="goodsPriceColumn" msprop:Generator_UserColumnName="goodsPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="goodsVipPrice" msprop:Generator_ColumnVarNameInTable="columngoodsVipPrice" msprop:Generator_ColumnPropNameInRow="goodsVipPrice" msprop:Generator_ColumnPropNameInTable="goodsVipPriceColumn" msprop:Generator_UserColumnName="goodsVipPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="goodsAmount" msprop:Generator_ColumnVarNameInTable="columngoodsAmount" msprop:Generator_ColumnPropNameInRow="goodsAmount" msprop:Generator_ColumnPropNameInTable="goodsAmountColumn" msprop:Generator_UserColumnName="goodsAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="totalMoney" msprop:Generator_ColumnVarNameInTable="columntotalMoney" msprop:Generator_ColumnPropNameInRow="totalMoney" msprop:Generator_ColumnPropNameInTable="totalMoneyColumn" msprop:Generator_UserColumnName="totalMoney" type="xs:string" minOccurs="0" />
+              <xs:element name="goodsVipAmount" msprop:Generator_ColumnVarNameInTable="columngoodsVipAmount" msprop:Generator_ColumnPropNameInRow="goodsVipAmount" msprop:Generator_ColumnPropNameInTable="goodsVipAmountColumn" msprop:Generator_UserColumnName="goodsVipAmount" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

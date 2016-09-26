@@ -27,6 +27,7 @@ namespace order.view
             orderInfoListHasButton = false;
             goodsInfoListHasButton = false;
             chooseMap = new List<DataRow>();
+            this.goodsCalcute.SelectedIndex = 0;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Formeing);
         }
         //读取用户信息列表
@@ -344,6 +345,11 @@ namespace order.view
         private void button5_Click(object sender, EventArgs e)
         {
             new OutBussiness(chooseMap).Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new  OutGoodsCalcute(new GoodsCalculate().selectGoodsInfo(this.goodsCalcute.SelectedIndex),this.goodsCalcute.SelectedIndex).Show();
         }
 
     }

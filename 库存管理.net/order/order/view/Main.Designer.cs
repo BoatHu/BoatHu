@@ -38,6 +38,8 @@
             this.userInfoName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.businessRecord = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.receiverName = new System.Windows.Forms.TextBox();
             this.isInTime = new System.Windows.Forms.CheckBox();
@@ -52,6 +54,8 @@
             this.businessId = new System.Windows.Forms.TextBox();
             this.select = new System.Windows.Forms.Button();
             this.goodsInfo = new System.Windows.Forms.TabPage();
+            this.goodsCalcute = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.goodsInfoGridView = new System.Windows.Forms.DataGridView();
             this.button15 = new System.Windows.Forms.Button();
@@ -59,8 +63,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.goodsName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.mainWindow.SuspendLayout();
             this.userInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoGrid)).BeginInit();
@@ -78,10 +80,11 @@
             this.mainWindow.Controls.Add(this.userInfo);
             this.mainWindow.Controls.Add(this.businessRecord);
             this.mainWindow.Controls.Add(this.goodsInfo);
-            this.mainWindow.Location = new System.Drawing.Point(12, 35);
+            this.mainWindow.Location = new System.Drawing.Point(18, 52);
+            this.mainWindow.Margin = new System.Windows.Forms.Padding(4);
             this.mainWindow.Name = "mainWindow";
             this.mainWindow.SelectedIndex = 0;
-            this.mainWindow.Size = new System.Drawing.Size(1232, 587);
+            this.mainWindow.Size = new System.Drawing.Size(1848, 880);
             this.mainWindow.TabIndex = 1;
             this.mainWindow.TabStop = false;
             this.mainWindow.Tag = "主窗体";
@@ -96,10 +99,11 @@
             this.userInfo.Controls.Add(this.label2);
             this.userInfo.Controls.Add(this.userInfoName);
             this.userInfo.Controls.Add(this.label1);
-            this.userInfo.Location = new System.Drawing.Point(4, 22);
+            this.userInfo.Location = new System.Drawing.Point(4, 28);
+            this.userInfo.Margin = new System.Windows.Forms.Padding(4);
             this.userInfo.Name = "userInfo";
-            this.userInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.userInfo.Size = new System.Drawing.Size(1224, 561);
+            this.userInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.userInfo.Size = new System.Drawing.Size(1840, 848);
             this.userInfo.TabIndex = 0;
             this.userInfo.Text = "会员信息";
             this.userInfo.UseVisualStyleBackColor = true;
@@ -108,9 +112,10 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(998, 39);
+            this.button2.Location = new System.Drawing.Point(1497, 58);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(112, 34);
             this.button2.TabIndex = 6;
             this.button2.Text = "增加";
             this.button2.UseVisualStyleBackColor = true;
@@ -124,20 +129,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userInfoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userInfoGrid.Location = new System.Drawing.Point(16, 79);
+            this.userInfoGrid.Location = new System.Drawing.Point(24, 118);
+            this.userInfoGrid.Margin = new System.Windows.Forms.Padding(4);
             this.userInfoGrid.Name = "userInfoGrid";
             this.userInfoGrid.ReadOnly = true;
             this.userInfoGrid.RowTemplate.Height = 23;
-            this.userInfoGrid.Size = new System.Drawing.Size(1092, 475);
+            this.userInfoGrid.Size = new System.Drawing.Size(1638, 712);
             this.userInfoGrid.TabIndex = 5;
             this.userInfoGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userInfoGrid_CellContentClick);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(851, 39);
+            this.button1.Location = new System.Drawing.Point(1276, 58);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 23);
+            this.button1.Size = new System.Drawing.Size(118, 34);
             this.button1.TabIndex = 4;
             this.button1.Text = "搜索或刷新";
             this.button1.UseVisualStyleBackColor = true;
@@ -145,35 +152,39 @@
             // 
             // userInfoPhone
             // 
-            this.userInfoPhone.Location = new System.Drawing.Point(572, 42);
+            this.userInfoPhone.Location = new System.Drawing.Point(858, 63);
+            this.userInfoPhone.Margin = new System.Windows.Forms.Padding(4);
             this.userInfoPhone.Name = "userInfoPhone";
-            this.userInfoPhone.Size = new System.Drawing.Size(100, 21);
+            this.userInfoPhone.Size = new System.Drawing.Size(148, 28);
             this.userInfoPhone.TabIndex = 3;
             this.userInfoPhone.TextChanged += new System.EventHandler(this.userInfoPhone_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(457, 45);
+            this.label2.Location = new System.Drawing.Point(686, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "会员电话";
             // 
             // userInfoName
             // 
-            this.userInfoName.Location = new System.Drawing.Point(186, 36);
+            this.userInfoName.Location = new System.Drawing.Point(279, 54);
+            this.userInfoName.Margin = new System.Windows.Forms.Padding(4);
             this.userInfoName.Name = "userInfoName";
-            this.userInfoName.Size = new System.Drawing.Size(100, 21);
+            this.userInfoName.Size = new System.Drawing.Size(148, 28);
             this.userInfoName.TabIndex = 1;
             this.userInfoName.TextChanged += new System.EventHandler(this.userInfoName_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 45);
+            this.label1.Location = new System.Drawing.Point(124, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(80, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "会员名字";
             // 
@@ -194,29 +205,56 @@
             this.businessRecord.Controls.Add(this.label5);
             this.businessRecord.Controls.Add(this.businessId);
             this.businessRecord.Controls.Add(this.select);
-            this.businessRecord.Location = new System.Drawing.Point(4, 22);
+            this.businessRecord.Location = new System.Drawing.Point(4, 28);
+            this.businessRecord.Margin = new System.Windows.Forms.Padding(4);
             this.businessRecord.Name = "businessRecord";
-            this.businessRecord.Padding = new System.Windows.Forms.Padding(3);
-            this.businessRecord.Size = new System.Drawing.Size(1224, 561);
+            this.businessRecord.Padding = new System.Windows.Forms.Padding(4);
+            this.businessRecord.Size = new System.Drawing.Size(1840, 848);
             this.businessRecord.TabIndex = 1;
             this.businessRecord.Text = "交易记录";
             this.businessRecord.UseVisualStyleBackColor = true;
             this.businessRecord.Click += new System.EventHandler(this.businessRecord_Click);
             // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Location = new System.Drawing.Point(1269, 780);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 34);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "打印快递单";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(1072, 780);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 34);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "打印出货单";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 32);
+            this.label6.Location = new System.Drawing.Point(44, 48);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(80, 18);
             this.label6.TabIndex = 27;
             this.label6.Text = "收件人：";
             // 
             // receiverName
             // 
-            this.receiverName.Location = new System.Drawing.Point(88, 26);
+            this.receiverName.Location = new System.Drawing.Point(132, 39);
+            this.receiverName.Margin = new System.Windows.Forms.Padding(4);
             this.receiverName.Name = "receiverName";
-            this.receiverName.Size = new System.Drawing.Size(100, 21);
+            this.receiverName.Size = new System.Drawing.Size(148, 28);
             this.receiverName.TabIndex = 26;
             this.receiverName.TextChanged += new System.EventHandler(this.receiverName_TextChanged);
             // 
@@ -224,10 +262,9 @@
             // 
             this.isInTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.isInTime.AutoSize = true;
-            this.isInTime.Location = new System.Drawing.Point(939, 11);
-            this.isInTime.Margin = new System.Windows.Forms.Padding(2);
+            this.isInTime.Location = new System.Drawing.Point(1411, 16);
             this.isInTime.Name = "isInTime";
-            this.isInTime.Size = new System.Drawing.Size(96, 16);
+            this.isInTime.Size = new System.Drawing.Size(142, 22);
             this.isInTime.TabIndex = 25;
             this.isInTime.Text = "是否筛选时间\r\n";
             this.isInTime.UseVisualStyleBackColor = true;
@@ -235,9 +272,10 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(986, 520);
+            this.button3.Location = new System.Drawing.Point(1479, 780);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(112, 34);
             this.button3.TabIndex = 24;
             this.button3.Text = "已完成支付";
             this.button3.UseVisualStyleBackColor = true;
@@ -246,9 +284,10 @@
             // button9
             // 
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.Location = new System.Drawing.Point(1071, 30);
+            this.button9.Location = new System.Drawing.Point(1606, 45);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(112, 34);
             this.button9.TabIndex = 18;
             this.button9.Text = "增加";
             this.button9.UseVisualStyleBackColor = true;
@@ -262,70 +301,78 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.orderGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderGridView.Location = new System.Drawing.Point(3, 116);
+            this.orderGridView.Location = new System.Drawing.Point(4, 174);
+            this.orderGridView.Margin = new System.Windows.Forms.Padding(4);
             this.orderGridView.Name = "orderGridView";
             this.orderGridView.RowTemplate.Height = 23;
-            this.orderGridView.Size = new System.Drawing.Size(1143, 386);
+            this.orderGridView.Size = new System.Drawing.Size(1714, 579);
             this.orderGridView.TabIndex = 17;
             this.orderGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderGridView_CellContentClick);
             // 
             // endTime
             // 
             this.endTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.endTime.Location = new System.Drawing.Point(744, 23);
+            this.endTime.Location = new System.Drawing.Point(1116, 34);
+            this.endTime.Margin = new System.Windows.Forms.Padding(4);
             this.endTime.Name = "endTime";
-            this.endTime.Size = new System.Drawing.Size(154, 21);
+            this.endTime.Size = new System.Drawing.Size(229, 28);
             this.endTime.TabIndex = 16;
             // 
             // startTime
             // 
-            this.startTime.Location = new System.Drawing.Point(459, 23);
+            this.startTime.Location = new System.Drawing.Point(688, 34);
+            this.startTime.Margin = new System.Windows.Forms.Padding(4);
             this.startTime.Name = "startTime";
-            this.startTime.Size = new System.Drawing.Size(154, 21);
+            this.startTime.Size = new System.Drawing.Size(229, 28);
             this.startTime.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(662, 28);
+            this.label3.Location = new System.Drawing.Point(993, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(98, 18);
             this.label3.TabIndex = 14;
             this.label3.Text = "结束时间：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(383, 28);
+            this.label4.Location = new System.Drawing.Point(574, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
+            this.label4.Size = new System.Drawing.Size(89, 18);
             this.label4.TabIndex = 13;
             this.label4.Text = "开始时间:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(218, 32);
+            this.label5.Location = new System.Drawing.Point(327, 48);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "订单号：";
             // 
             // businessId
             // 
-            this.businessId.Location = new System.Drawing.Point(277, 23);
+            this.businessId.Location = new System.Drawing.Point(416, 34);
+            this.businessId.Margin = new System.Windows.Forms.Padding(4);
             this.businessId.Name = "businessId";
-            this.businessId.Size = new System.Drawing.Size(100, 21);
+            this.businessId.Size = new System.Drawing.Size(148, 28);
             this.businessId.TabIndex = 11;
             this.businessId.TextChanged += new System.EventHandler(this.businessId_TextChanged);
             // 
             // select
             // 
             this.select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.select.Location = new System.Drawing.Point(940, 30);
+            this.select.Location = new System.Drawing.Point(1410, 45);
+            this.select.Margin = new System.Windows.Forms.Padding(4);
             this.select.Name = "select";
-            this.select.Size = new System.Drawing.Size(75, 23);
+            this.select.Size = new System.Drawing.Size(112, 34);
             this.select.TabIndex = 10;
             this.select.Text = "查询";
             this.select.UseVisualStyleBackColor = true;
@@ -333,6 +380,8 @@
             // 
             // goodsInfo
             // 
+            this.goodsInfo.Controls.Add(this.goodsCalcute);
+            this.goodsInfo.Controls.Add(this.button6);
             this.goodsInfo.Controls.Add(this.button14);
             this.goodsInfo.Controls.Add(this.goodsInfoGridView);
             this.goodsInfo.Controls.Add(this.button15);
@@ -340,21 +389,45 @@
             this.goodsInfo.Controls.Add(this.label9);
             this.goodsInfo.Controls.Add(this.goodsName);
             this.goodsInfo.Controls.Add(this.label10);
-            this.goodsInfo.Location = new System.Drawing.Point(4, 22);
+            this.goodsInfo.Location = new System.Drawing.Point(4, 28);
+            this.goodsInfo.Margin = new System.Windows.Forms.Padding(4);
             this.goodsInfo.Name = "goodsInfo";
-            this.goodsInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.goodsInfo.Size = new System.Drawing.Size(1224, 561);
+            this.goodsInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.goodsInfo.Size = new System.Drawing.Size(1840, 848);
             this.goodsInfo.TabIndex = 2;
             this.goodsInfo.Text = "商品信息";
             this.goodsInfo.UseVisualStyleBackColor = true;
             this.goodsInfo.Click += new System.EventHandler(this.goodsInfo_Click);
             // 
+            // goodsCalcute
+            // 
+            this.goodsCalcute.FormattingEnabled = true;
+            this.goodsCalcute.Items.AddRange(new object[] {
+            "每天商品报表",
+            "每周商品报表",
+            "每月商品报表"});
+            this.goodsCalcute.Location = new System.Drawing.Point(1444, 749);
+            this.goodsCalcute.Name = "goodsCalcute";
+            this.goodsCalcute.Size = new System.Drawing.Size(121, 26);
+            this.goodsCalcute.TabIndex = 19;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1599, 749);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(102, 26);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "查看";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.Location = new System.Drawing.Point(963, 31);
+            this.button14.Location = new System.Drawing.Point(1444, 46);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.Size = new System.Drawing.Size(112, 34);
             this.button14.TabIndex = 17;
             this.button14.Text = "增加";
             this.button14.UseVisualStyleBackColor = true;
@@ -368,20 +441,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.goodsInfoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.goodsInfoGridView.Location = new System.Drawing.Point(27, 86);
+            this.goodsInfoGridView.Location = new System.Drawing.Point(40, 129);
+            this.goodsInfoGridView.Margin = new System.Windows.Forms.Padding(4);
             this.goodsInfoGridView.Name = "goodsInfoGridView";
             this.goodsInfoGridView.ReadOnly = true;
             this.goodsInfoGridView.RowTemplate.Height = 23;
-            this.goodsInfoGridView.Size = new System.Drawing.Size(1043, 375);
+            this.goodsInfoGridView.Size = new System.Drawing.Size(1564, 562);
             this.goodsInfoGridView.TabIndex = 16;
             this.goodsInfoGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.goodsInfoGridView_CellContentClick);
             // 
             // button15
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button15.Location = new System.Drawing.Point(832, 30);
+            this.button15.Location = new System.Drawing.Point(1248, 45);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.Size = new System.Drawing.Size(112, 34);
             this.button15.TabIndex = 15;
             this.button15.Text = "搜索";
             this.button15.UseVisualStyleBackColor = true;
@@ -389,66 +464,49 @@
             // 
             // goodId
             // 
-            this.goodId.Location = new System.Drawing.Point(583, 33);
+            this.goodId.Location = new System.Drawing.Point(874, 50);
+            this.goodId.Margin = new System.Windows.Forms.Padding(4);
             this.goodId.Name = "goodId";
-            this.goodId.Size = new System.Drawing.Size(100, 21);
+            this.goodId.Size = new System.Drawing.Size(148, 28);
             this.goodId.TabIndex = 14;
             this.goodId.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(468, 36);
+            this.label9.Location = new System.Drawing.Point(702, 54);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.Size = new System.Drawing.Size(62, 18);
             this.label9.TabIndex = 13;
             this.label9.Text = "商品id";
             // 
             // goodsName
             // 
-            this.goodsName.Location = new System.Drawing.Point(197, 27);
+            this.goodsName.Location = new System.Drawing.Point(296, 40);
+            this.goodsName.Margin = new System.Windows.Forms.Padding(4);
             this.goodsName.Name = "goodsName";
-            this.goodsName.Size = new System.Drawing.Size(100, 21);
+            this.goodsName.Size = new System.Drawing.Size(148, 28);
             this.goodsName.TabIndex = 12;
             this.goodsName.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(94, 36);
+            this.label10.Location = new System.Drawing.Point(141, 54);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.Size = new System.Drawing.Size(80, 18);
             this.label10.TabIndex = 11;
             this.label10.Text = "商品名字";
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(715, 520);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "打印出货单";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(846, 520);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "打印快递单";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 634);
+            this.ClientSize = new System.Drawing.Size(1908, 951);
             this.Controls.Add(this.mainWindow);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
             this.Text = "主窗体";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -501,5 +559,7 @@
         private System.Windows.Forms.TextBox receiverName;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox goodsCalcute;
+        private System.Windows.Forms.Button button6;
     }
 }

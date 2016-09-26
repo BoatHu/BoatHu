@@ -211,6 +211,49 @@ namespace order.model
                 }
             }
         }
+        public DataSet calculateGoodsInfoList(string sql)
+        {
+            try
+            {
+                //创建DataSet对象
+                conn.Open();
+                SQLiteCommand cmdCreateTable = new SQLiteCommand(sql, conn);
+                SQLiteDataReader reader = cmdCreateTable.ExecuteReader();
+                DataSet ds = new DataSet();
+                //创建DataTable对象
+                DataTable dt = new DataTable();
+                //创建列
+                dt.Columns.Add("goodsName", typeof(string));
+                dt.Columns.Add("price", typeof(string));
+                dt.Columns.Add("orderAmount", typeof(string));
+                while (reader.Read())
+                {
+                    //创建行
+                    DataRow row = dt.NewRow();
+                    //添加数据
+                    row[0] = reader["goodsName"];
+                    row[1] = reader["price"];
+                    row[2] = reader["orderAmount"];
+                    //将行添加到数据表的行集合中
+                    dt.Rows.Add(row);
+                }
+                //将数据表添加到DataSet中 
+                ds.Tables.Add(dt);
+                return ds;
+            }
+            catch (Exception e)
+            {
+                ShowMessage.showMessage("执行查询语句出错");
+                return null;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
         public bool ifExist(string sql)
         {
             try
