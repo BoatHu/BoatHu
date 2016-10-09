@@ -132,7 +132,16 @@ namespace order.model
                     DataRow row = dt.NewRow();
                     //添加数据
                     row[0] = reader["orderId"];
-                    row[1] = reader["status"];
+                    string stataus = (string)reader["status"];
+                    if(Convert.ToBoolean(stataus))
+                    {
+                        stataus = "已完成";
+                    }
+                    else
+                    {
+                        stataus = "未完成";
+                    }
+                    row[1] = stataus;
                     row[2] = reader["goodsName"];
                     row[3] = reader["price"];
                     row[4] = reader["orderAmount"];

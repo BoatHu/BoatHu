@@ -143,6 +143,14 @@ namespace order.view
         {
             if (this.mainWindow.SelectedTab.Name.Equals("businessRecord"))
             {
+                if (!orderInfoListHasButton)
+                {
+                    DataGridViewCheckBoxColumn checkBox = new DataGridViewCheckBoxColumn();
+                    checkBox.Name = "orderChecked";
+                    checkBox.HeaderText = "选择";
+                    this.orderGridView.Columns.AddRange(checkBox);
+                    orderInfoListHasButton = true;
+                }
                 reloadBusinessResuletList();
                 if (!orderInfoListHasButton)
                 {
@@ -158,11 +166,7 @@ namespace order.view
                     delete.UseColumnTextForButtonValue = true;
                     delete.Text = "删除";
                     this.orderGridView.Columns.AddRange(delete);
-                    DataGridViewCheckBoxColumn checkBox = new DataGridViewCheckBoxColumn();
-                    checkBox.Name = "orderChecked";
-                    checkBox.HeaderText = "选择";
-                    this.orderGridView.Columns.AddRange(checkBox);
-                    orderInfoListHasButton = true;
+                 
                     //DataGridViewButtonColumn printOutPut = new DataGridViewButtonColumn();
                     //printOutPut.Name = "printOutPut";
                     //printOutPut.HeaderText = "打印";
@@ -261,7 +265,24 @@ namespace order.view
                 chooseList.Add((string)ite[0]);
             }
             new EditBusinessInfo().setListStatus(chooseList);
-            chooseMap.Clear();
+            foreach (DataRow ite in chooseMap)
+            {
+                string name = (string)ite[2];
+                string number = (string)ite[4];
+                string status = (string)ite[1];
+                if (status.Equals("未完成"))
+                {
+                    if (!new EditGoodsInfocs().reduceGoodsAmount(name, number))
+                    {
+                        return;
+                    }           
+                }
+                else
+                {
+                    ShowMessage.showMessage("包含已经完成的选项 已完成的部分未减少库存");
+                }
+            }
+            chooseMap.Clear();      
             reloadBusinessResuletList();
         }
 
@@ -331,21 +352,25 @@ namespace order.view
 
         private void button4_Click(object sender, EventArgs e)
         {
-            List<string> chooseList = new List<string>();
-            //remove reduce module
-            foreach (DataRow ite in chooseMap)
-            {
-                if (!new EditGoodsInfocs().reduceGoodsAmount((string)ite[2]))
-                {
-                    return;
-                }
-            }
+            //List<string> chooseList = new List<string>();
+            ////remove reduce module
+            //foreach (DataRow ite in chooseMap)
+            //{
+            //    string name = (string)ite[2];
+            //    string number = (string)ite[4];
+            //    if (!new EditGoodsInfocs().reduceGoodsAmount(name,number))
+            //    {
+            //        return;
+            //    }
+            //}
             new OutBussiness(chooseMap).Show();
+            chooseMap.Clear();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             new OutBussiness(chooseMap).Show();
+            chooseMap.Clear();
         }
 
         private void button6_Click(object sender, EventArgs e)

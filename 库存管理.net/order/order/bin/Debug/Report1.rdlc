@@ -6,27 +6,27 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.18251cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.18251cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.18251cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.27149cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.05909cm</Width>
+              <Width>2.69553cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.81403cm</Width>
+              <Width>2.49654cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.69701cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -38,7 +38,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>产品编号</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -68,7 +70,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>产品名称</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -98,7 +102,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>产品数量</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -128,7 +134,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>产品单价</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -158,7 +166,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>金额</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -188,7 +198,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>备注</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -211,7 +223,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.69701cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -419,10 +431,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>3.35703cm</Top>
+        <Top>3.63926cm</Top>
         <Left>1.05516cm</Left>
-        <Height>1.2cm</Height>
-        <Width>15.87312cm</Width>
+        <Height>1.39402cm</Height>
+        <Width>14.01107cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -437,17 +449,21 @@
             <TextRuns>
               <TextRun>
                 <Value>销售单</Value>
-                <Style />
+                <Style>
+                  <FontFamily>宋体</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox247</rd:DefaultName>
         <Top>0.41437cm</Top>
-        <Left>7.17932cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Left>5.47913cm</Left>
+        <Height>0.79403cm</Height>
+        <Width>4.75368cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -470,14 +486,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox252</rd:DefaultName>
-        <Top>6.95537cm</Top>
-        <Left>15.60724cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Top>6.57613cm</Top>
+        <Left>10.28573cm</Left>
+        <Height>0.66174cm</Height>
+        <Width>4.55034cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -497,17 +515,21 @@
             <TextRuns>
               <TextRun>
                 <Value>总金额</Value>
-                <Style />
+                <Style>
+                  <FontFamily>宋体</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox253</rd:DefaultName>
-        <Top>7.08766cm</Top>
-        <Left>12.59099cm</Left>
-        <Height>0.46771cm</Height>
-        <Width>2.31479cm</Width>
+        <Top>6.57613cm</Top>
+        <Left>5.62595cm</Left>
+        <Height>0.66174cm</Height>
+        <Width>2.54882cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -523,24 +545,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.81403cm</Width>
+              <Width>2.43304cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.50195cm</Width>
+              <Width>3.12096cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.68716cm</Width>
+              <Width>3.30617cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.05594cm</Width>
+              <Width>2.67495cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.81403cm</Width>
+              <Width>2.43304cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.64958cm</Height>
+              <Height>0.74659cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -671,7 +693,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.69701cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -718,7 +740,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>联系电话：</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>宋体</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -790,8 +814,8 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>2.10745cm</Top>
         <Left>1.05516cm</Left>
-        <Height>1.24958cm</Height>
-        <Width>15.87312cm</Width>
+        <Height>1.4436cm</Height>
+        <Width>13.96815cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -801,10 +825,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.35417in</Height>
+    <Height>100mm</Height>
     <Style />
   </Body>
-  <Width>8.47185in</Width>
+  <Width>156.8359mm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

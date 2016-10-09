@@ -30,7 +30,7 @@ namespace order.controller
             GoodsInfoEntity.reset();
             return new ExecuteSql().execute(sql);
         }
-        public bool reduceGoodsAmount(string goodsName)
+        public bool reduceGoodsAmount(string goodsName, string number)
         {
             string sql = "select * from goodsInfo where  goodsName = '" + goodsName + "'";
             DataSet dataSet = new ExecuteSql().selectGoodInfo(sql);
@@ -44,24 +44,24 @@ namespace order.controller
             {
                 DataRow row = dataTable.Rows[0];
                 int amount = Convert.ToInt32((string)row[4]);
-                if (amount > 0)
+                //if (amount > 0)
+                //{
+                sql = "update goodsInfo set goodsAmount = goodsAmount - " + number + " where  goodsName = '" + goodsName + "'";
+                if (new ExecuteSql().execute(sql))
                 {
-                    sql = "update goodsInfo set goodsAmount = goodsAmount - 1 where  goodsName = '" + goodsName + "'";
-                    if (new ExecuteSql().execute(sql))
-                    {
-                        ShowMessage.showMessage("删除成功");
-                    }
-                    else
-                    {
-                        ShowMessage.showMessage("删除失败");
-                    }
+                    ShowMessage.showMessage("删除成功");
                 }
                 else
                 {
-                    ShowMessage.showMessage("没库存啦");
+                    ShowMessage.showMessage("删除失败");
                 }
+                //}
+                //else
+                //{
+                //    ShowMessage.showMessage("没库存啦");
+                //}
                 return true;
-            }      
+            }
         }
         public void deleteGoodsInfo()
         {
