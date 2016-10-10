@@ -93,3 +93,17 @@ C:\Users\peng\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.Ou
 d:\Users\huzhou\Desktop\order\库存管理.net\order\order\bin\Debug\order.exe.config
 d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.exe
 d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.pdb
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\bin\Debug\order.exe
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\bin\Debug\order.pdb
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.csprojResolveAssemblyReference.cache
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.BusinessInfoEdit.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.BusinessRecordEdit.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.LoginWindow.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.Properties.Resources.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.Main.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.OutBussiness.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.OutGoodsCalcute.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.view.UserInfoEdit.resources
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\order.csproj.GenerateResource.Cache
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\RdlCompile.cache
+d:\Users\huzhou\Desktop\order\库存管理.net\order\order\obj\Debug\RdlCompile.compiled
