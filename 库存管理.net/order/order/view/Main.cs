@@ -149,7 +149,6 @@ namespace order.view
                     checkBox.Name = "orderChecked";
                     checkBox.HeaderText = "选择";
                     this.orderGridView.Columns.AddRange(checkBox);
-                    orderInfoListHasButton = true;
                 }
                 reloadBusinessResuletList();
                 if (!orderInfoListHasButton)
@@ -179,6 +178,7 @@ namespace order.view
                     //printExpress.UseColumnTextForButtonValue = true;
                     //printExpress.Text = "打印快递单";
                     //this.orderGridView.Columns.AddRange(printExpress);
+                    orderInfoListHasButton = true;
                 }
             }
             else if (this.mainWindow.SelectedTab.Name.Equals("goodsInfo"))

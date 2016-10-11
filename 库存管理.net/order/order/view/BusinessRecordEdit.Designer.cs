@@ -51,6 +51,7 @@
             this.Status = new System.Windows.Forms.CheckBox();
             this.goodNameList = new System.Windows.Forms.ComboBox();
             this.businessPrice = new System.Windows.Forms.Label();
+            this.isVip = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // receiveAdress
@@ -255,11 +256,23 @@
             this.businessPrice.TabIndex = 50;
             this.businessPrice.Text = "交易价格";
             // 
+            // isVip
+            // 
+            this.isVip.AutoSize = true;
+            this.isVip.Location = new System.Drawing.Point(405, 118);
+            this.isVip.Name = "isVip";
+            this.isVip.Size = new System.Drawing.Size(84, 16);
+            this.isVip.TabIndex = 51;
+            this.isVip.Text = "是否会员价";
+            this.isVip.UseVisualStyleBackColor = true;
+            this.isVip.CheckedChanged += new System.EventHandler(this.isVip_CheckedChanged);
+            // 
             // BusinessRecordEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 532);
+            this.Controls.Add(this.isVip);
             this.Controls.Add(this.businessPrice);
             this.Controls.Add(this.goodNameList);
             this.Controls.Add(this.Status);
@@ -316,5 +329,6 @@
         private System.Windows.Forms.CheckBox Status;
         private System.Windows.Forms.ComboBox goodNameList;
         private System.Windows.Forms.Label businessPrice;
+        private System.Windows.Forms.CheckBox isVip;
     }
 }

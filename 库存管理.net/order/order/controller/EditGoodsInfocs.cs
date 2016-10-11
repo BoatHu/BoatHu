@@ -30,6 +30,23 @@ namespace order.controller
             GoodsInfoEntity.reset();
             return new ExecuteSql().execute(sql);
         }
+        public String getvipPriceByGoodsName(string goodName)
+        {
+            string sql = "select * from goodsInfo where goodsName ='" + goodName + "'";
+            DataSet dataSet = new ExecuteSql().selectGoodInfo(sql);
+            DataTable dataTable = dataSet.Tables[0];
+            if (dataTable.Rows.Count == 0)
+            {
+                ShowMessage.showMessage("请确认有没有" + goodName + "商品");
+                return null;
+            }
+            else
+            {
+                DataRow row = dataTable.Rows[0];
+                String vipPrice = (string)row[3];
+                return vipPrice;
+            }
+        }
         public bool reduceGoodsAmount(string goodsName, string number)
         {
             string sql = "select * from goodsInfo where  goodsName = '" + goodsName + "'";

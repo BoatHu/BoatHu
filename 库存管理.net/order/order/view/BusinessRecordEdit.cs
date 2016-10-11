@@ -17,6 +17,7 @@ namespace order.view
         class GoodInfo {
             public string price { get; set; }
             public string name { get; set; }
+            public string VipPrice { get; set; }
         }
         DataSet goodRecordList;
         List<GoodInfo> goodsNameList;
@@ -70,13 +71,13 @@ namespace order.view
             {
                 this.orderTime.Value = BusinessInfoEntity.exchangeTime;
             }
-            if (BusinessInfoEntity.status == null)
+            if (BusinessInfoEntity.status == null || BusinessInfoEntity.status.Equals("未完成"))
             {
                 this.Status.Checked = false;
             }
             else
             {
-                this.Status.Checked = bool.Parse(BusinessInfoEntity.status);
+                this.Status.Checked = true;
             }
         }
         public void loadList()
@@ -95,8 +96,15 @@ namespace order.view
             goodNameList.AutoCompleteSource = AutoCompleteSource.CustomSource;
             goodNameList.AutoCompleteCustomSource = goods;
             this.goodNameList.SelectedItem = 0;
+            getVipPrice();
         }
-        
+        private void getVipPrice()
+        {
+            foreach (GoodInfo info in goodsNameList)
+            {
+                info.VipPrice = new EditGoodsInfocs().getvipPriceByGoodsName(info.name);
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -135,7 +143,27 @@ namespace order.view
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = this.goodNameList.SelectedIndex;
-            this.businessPrice.Text = goodsNameList[index].price;
+            if (isVip.Checked)
+            {
+                this.businessPrice.Text = goodsNameList[index].VipPrice;
+            }
+            else
+            {
+                this.businessPrice.Text = goodsNameList[index].price;
+            }
+        }
+
+        private void isVip_CheckedChanged(object sender, EventArgs e)
+        {
+            int index = this.goodNameList.SelectedIndex;
+            if (isVip.Checked)
+            {
+                this.businessPrice.Text = goodsNameList[index].VipPrice;
+            }
+            else
+            {
+                this.businessPrice.Text = goodsNameList[index].price;
+            }
         }
     }
 }
