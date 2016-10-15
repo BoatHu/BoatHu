@@ -14,6 +14,7 @@ namespace order.view
     public partial class OutGoodsCalcute : Form
     {
         private DataSet goodsInfoList;
+        private double totalAmount;
         public OutGoodsCalcute()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace order.view
 
         private void OutGoodsCalcute_Load(object sender, EventArgs e)
         {
+            totalAmount = 0;
             //this.reportViewer1.LocalReport.ReportPath = Environment.CurrentDirectory + "\\GoodsReport.rdlc";
             if (goodsInfoList != null)
             {
@@ -62,9 +64,14 @@ namespace order.view
                     if (!string.IsNullOrEmpty(price) && !string.IsNullOrEmpty(amount))
                     {
                         row["totalMoney"] = Convert.ToDouble(price) * Convert.ToDouble(amount);
+                        totalAmount += Convert.ToDouble(price) * Convert.ToDouble(amount);
                         dt.Rows.Add(row);
                     }
                 }
+                List<ReportParameter> para = new List<ReportParameter>();
+                para.Add(new ReportParameter("TotalAmount", totalAmount.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(para);
+
                 this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
                 this.reportViewer1.RefreshReport();
                 this.reportViewer1.ProcessingMode = ProcessingMode.Local;
